@@ -1,0 +1,13 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# Excluir archivo de credenciales de Firebase (RF08)
+app/google-services.json
+google-services.json

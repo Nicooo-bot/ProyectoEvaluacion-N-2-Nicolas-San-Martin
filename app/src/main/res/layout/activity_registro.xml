@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Formulario de Incidencia"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Título de la incidencia *"
+            android:inputType="textCapSentences"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción detallada *"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top|start"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categoría *"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etFechaHora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha y Hora (dd/MM/yyyy HH:mm) *"
+            android:inputType="datetime"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coordenadas Geográficas (GPS) *"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/etLatitud"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Latitud *"
+                android:inputType="numberDecimal|numberSigned"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/etLongitud"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Longitud *"
+                android:inputType="numberDecimal|numberSigned"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnObtenerGPS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Obtener Ubicación Actual (GPS)"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Guardar Incidencia en Firestore"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💡 Tip Sensor (RF06): Sacude el teléfono para limpiar los campos del formulario."
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>
