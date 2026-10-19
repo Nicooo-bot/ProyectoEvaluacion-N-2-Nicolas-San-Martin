@@ -64,7 +64,7 @@ public class ListadoActivity extends AppCompatActivity {
 
     private void cargarIncidencias() {
         if (!hayConexionRed()) {
-            tvEstadoCarga.setText("⚠️ Sin conexión a Internet. Mostrando caché local o verifique su red.");
+            tvEstadoCarga.setText(" Sin conexión a Internet. Mostrando caché local o verifique su red.");
             Toast.makeText(this, "Error de red: No hay conexión a Internet activa.", Toast.LENGTH_LONG).show();
         } else {
             tvEstadoCarga.setText("Consultando Firebase Cloud Firestore...");
